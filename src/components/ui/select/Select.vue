@@ -10,7 +10,7 @@ defineProps<Props>();
 
 const emits = defineEmits(['change'])
 
-const onChange = (event) => {
+const onChange = (event: any) => {
     emits('change', event);
 }
 

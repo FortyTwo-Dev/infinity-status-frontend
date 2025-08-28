@@ -135,7 +135,7 @@ onMounted(() => {
 
               <div class="flex flex-row items-center justify-between">
                 <p class="text-xs">Last checked :
-                  {{ lastStatuses[app.id] ? new Date(lastStatuses[app.id].created_at).toLocaleString() : 'Never'}}
+                  {{ lastStatuses[app.id]?.created_at ? new Date(lastStatuses[app.id]!.created_at).toLocaleString() : 'Never' }}
               </p>
                 <a target="_blank" class="text-sm hover:text-primary underline" :href="app.url">website</a>
               </div>
