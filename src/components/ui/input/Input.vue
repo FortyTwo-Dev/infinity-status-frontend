@@ -13,7 +13,7 @@ defineProps<Props>();
 
 const emits = defineEmits(['input'])
 
-const onInput = (event) => {
+const onInput = (event: any) => {
     emits('input', event);
 }
 

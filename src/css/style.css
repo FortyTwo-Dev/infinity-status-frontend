@@ -21,6 +21,13 @@
     --color-destructive: var(--destructive);
     --color-destructive-foreground: var(--destructive-foreground);
 
+    --color-success: var(--success);
+    --color-success-foreground: var(--success-foreground);
+
+    --color-warning: var(--warning);
+    --color-warning-foreground: var(--warning-foreground);
+
+
 }
 
 :root {
@@ -36,12 +43,17 @@
     --accent: oklch(0.97 0 0);
     --accent-foreground: oklch(0.205 0 0);
 
-    --destructive: oklch(0.577 0.245 27.325);
+    --destructive: oklch(63.7% 0.237 25.331);
     --destructive-foreground: oklch(0.205 0 0);
+
+    --success: oklch(72.3% 0.219 149.579);
+    --success-foreground: oklch(0.205 0 0);
+
+    --warning: oklch(76.9% 0.188 70.08);
+    --warning-foreground: oklch(0.205 0 0);
 
     --radius: 0rem;
 }
-
 @import "./theme/blue.css";
 @import "./theme/red.css";
 @import "./theme/yellow.css";

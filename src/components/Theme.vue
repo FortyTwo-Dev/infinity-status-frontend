@@ -66,7 +66,7 @@ watch([isDark, theme], () => {
 </script>
 
 <template>
-  <div id="toggle-theme-button" class="absolute top-0 right-0 mt-6 mr-6 cursor-pointer" @click="toggleTheme">
+  <div id="toggle-theme-button" class="absolute top-0 right-0 mr-6 cursor-pointer" @click="toggleTheme">
     <svg id="sun" ref="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" :class="{ hidden: isDark }">
       <circle cx="12" cy="12" r="4" />
@@ -86,7 +86,7 @@ watch([isDark, theme], () => {
         d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
     </svg>
   </div>
-  <div id="select-theme-button" class="absolute top-0 right-0 mt-6 mr-18 cursor-pointer"
+  <div id="select-theme-button" class="absolute top-0 right-0 mr-18 cursor-pointer"
     onclick="document.getElementById('theme-dialog').classList.toggle('hidden')">
     <svg id="palette" class="stroke-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
       viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -99,7 +99,7 @@ watch([isDark, theme], () => {
       <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
     </svg>
   </div>
-  <div id="theme-dialog" class="hidden absolute top-0 right-0 mt-18 mr-6 min-h-10 w-full max-w-3xs bg-secondary text-foreground">
+  <div id="theme-dialog" class="z-10 hidden absolute top-0 right-0 mt-8 mr-6 min-h-10 w-full max-w-3xs bg-secondary text-foreground">
     <div class="bg-secondary text-foreground p-2 border border-primary">
       <div class="flex flex-col flex-wrap gap-4">
         <div>
@@ -117,7 +117,5 @@ watch([isDark, theme], () => {
 </template>
 
 <style scoped>
-.hidden {
-  display: none;
-}
+
 </style>
