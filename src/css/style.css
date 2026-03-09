@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-
     --radius-sm: var(--radius);
     --radius-md: calc(var(--radius) + 2px);
     --radius-lg: calc(var(--radius) + 4px);
@@ -26,8 +25,6 @@
 
     --color-warning: var(--warning);
     --color-warning-foreground: var(--warning-foreground);
-
-
 }
 
 :root {
@@ -54,6 +51,9 @@
 
     --radius: 0rem;
 }
+
+@import "./components/button.css";
+
 @import "./theme/blue.css";
 @import "./theme/red.css";
 @import "./theme/yellow.css";
