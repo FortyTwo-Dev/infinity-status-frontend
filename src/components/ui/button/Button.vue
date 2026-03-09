@@ -9,16 +9,11 @@ interface Props {
 
 defineProps<Props>();
 
-const emits = defineEmits(['click'])
-
-const onClick = (event: any) => {
-    emits('click', event);
-}
 
 const variantClasses = {
-    primary: 'w-full bg-primary text-primary-foreground hover:opacity-85 p-2 cursor-pointer rounded-sm border-transparent',
-    secondary: 'w-full bg-secondary hover:opacity-85 p-2 cursor-pointer rounded-sm border border-transparent',
-    secondarySelectPrimary: 'w-full bg-secondary hover:opacity-85 p-2 cursor-pointer rounded-sm border border-primary',
+    primary: 'button button-primary',
+    secondary: 'button button-secondary',
+    secondarySelectPrimary: 'button button-secondary-select-primary',
 };
 
 const getVariantClasses = (variant: Variant) => {
@@ -28,7 +23,7 @@ const getVariantClasses = (variant: Variant) => {
 </script>
 
 <template>
-    <button @click="onClick"
+    <button
         :class="getVariantClasses(variant ?? 'primary')">
         <p class="text-center font-semibold">{{ text }}</p>
     </button>
