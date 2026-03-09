@@ -1,0 +1,36 @@
+@layer components {
+    .button {
+
+        @apply cursor-pointer rounded-sm shadow box-border inline-flex h-11 justify-center items-center;
+        
+        &:hover {
+            @media (hover: hover) {
+                @apply opacity-90;
+            }
+        }
+
+        & p {
+            @apply px-4;
+        }
+
+        &:focus {
+            @apply translate-y-0.25 transition-transform shadow-none;
+        }
+
+        &.button-primary {
+            @apply bg-primary text-primary-foreground shadow-primary;
+        }
+
+        &.button-secondary {
+            @apply bg-secondary text-secondary-foreground shadow-secondary;
+        }
+
+        &.button-secondary-select-primary {
+            @apply bg-secondary text-secondary-foreground border border-primary shadow-none;
+
+            & p {
+                @apply px-[calc(1rem-1px)];
+            }
+        }
+    }
+}
